@@ -41,7 +41,7 @@ const CountryPage = ({ countries, isDark, setIsDark }) => {
             Back
           </button>
         </div>
-        <div className='flex w-[90%] items-center gap-[3rem]'>
+        <div className='flex w-[90%] items-center gap-[10rem]'>
           <img
             className="w-[45%] h-[100%]"
             src={country.flags.png}
