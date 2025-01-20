@@ -12,12 +12,12 @@ const Header = ({ themeChange, isDark }) => {
   return (
     <header className={`flex justify-center shadow-md ${headerClass}`}>
       <div className={`flex w-[90%] h-24 justify-between items-center sm:h-20 md:h-20 ${headerClass}`}>
-        <div className="font-sans text-3xl font-extrabold">
+        <div className="font-sans sm:text-[1rem] md:text-3xl font-extrabold">
           Where in the world?
         </div>
         <button
           onClick={changeTheme}
-          className={`flex items-center font-sans text-lg font-bold border-none ${buttonClass}`}
+          className={`flex items-center font-sans sm:text-[1rem] md:text-lg font-bold border-none ${buttonClass}`}
         >
           {isDark ? <FaSun className="mt-1 mr-2" /> : <FaMoon className="mt-1 mr-2" />}
           {isDark ? "Light Mode" : "Dark Mode"}

@@ -31,7 +31,7 @@ const CountryPage = ({ countries, isDark, setIsDark }) => {
   return (
     <div>
       <Header themeChange={setIsDark} isDark={isDark} />
-      <div className={`flex flex-col items-center bg-gray h-[60rem] ${containerClass}`}>
+      <div className={`flex flex-col items-center bg-gray h-[80rem] ${containerClass}`}>
         <div className='flex w-[90%] mt-10'>
           <button
             className={`flex justify-center items-center gap-[1rem] mb-8 px-4 py-2 rounded w-[10rem] shadow-md ${buttonTheme}`}
@@ -41,16 +41,16 @@ const CountryPage = ({ countries, isDark, setIsDark }) => {
             Back
           </button>
         </div>
-        <div className='flex w-[90%] items-center gap-[10rem]'>
+        <div className='flex w-[90%] sm:items-start md:items-center sm:gap-[1rem] md:gap-[6rem] sm:flex-col md:flex-row'>
           <img
-            className="w-[45%] h-[100%]"
+            className="sm:w-[100%] sm:h-[15rem] md:w-[40%] md:h-[20rem]"
             src={country.flags.png}
             alt={`Flag of ${country.name.common}`}
           />
           <div className='flex flex-col'>
             <div>
               <h2 className="text-2xl font-bold mb-2">{country.name.common}</h2>
-              <div className='flex text-[0.9rem] gap-[2rem]'>
+              <div className='flex text-[0.9rem] sm:gap-[0.5rem] md:gap-[2rem] sm:w-[90%] sm:flex-col md:w-[full] md:flex-row'>
                 <div className='flex flex-col w-[50%]'>
                   <p>
                     <strong>Native Name:</strong> {country.name.nativeName
