@@ -13,12 +13,12 @@ const CountriesCardsList = ({ isDark, countries }) => {
 
   return (
     <div className={`flex justify-center items-center h-[100%] m-0 ${containerClass}`}>
-      <div className="flex flex-wrap w-[90%] gap-y-[4rem] gap-x-[2%] mb-[50rem] justify-center items-center">
+      <div className="flex flex-wrap w-[90%] gap-y-[4rem] gap-x-[3rem] mb-[50rem] justify-center items-center">
         {countries.map((country, index) => (
           <div
             key={index}
             onClick={() => handleCountryClick(country)}
-            className="sm:w-[90%] md:w-[23.5%] cursor-pointer"
+            className="w-[17rem] cursor-pointer"
           >
             <CountriesCard Country={country} isDark={isDark} />
           </div>
