@@ -44,7 +44,16 @@ function App() {
             />
           }
         />
-        <Route path="/:countryName" element={<CountryPage countries={countries} isDark={isDark} setIsDark={setIsDark} />} />
+        <Route
+          path="/:countryName"
+          element={
+            <CountryPage
+              countries={countries}
+              isDark={isDark}
+              setIsDark={setIsDark}
+            />
+          }
+        />
       </Routes>
     </Router>
   );

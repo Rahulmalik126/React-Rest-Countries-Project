@@ -1,7 +1,6 @@
 import React from "react";
 
 const CountriesCard = ({ Country, isDark }) => {
-
   const cardClass = isDark ? "bg-[#2b3743] text-white" : "bg-white text-black";
 
   return (
@@ -20,12 +19,12 @@ const CountriesCard = ({ Country, isDark }) => {
         <li className="font-sans text-[13px]">
           Population: {` ${Country.population.toLocaleString()}`}
         </li>
-        <li className="font-sans text-[13px]">Region: {` ${Country.region}`}</li>
+        <li className="font-sans text-[13px]">
+          Region: {` ${Country.region}`}
+        </li>
         <li className="font-sans text-[13px] mr-1">
           Capital:{" "}
-          {Country.capital
-            ? ` ${Country.capital.join(", ")}`
-            : " No Capital"}
+          {Country.capital ? ` ${Country.capital.join(", ")}` : " No Capital"}
         </li>
       </ul>
     </div>

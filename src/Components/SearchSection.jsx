@@ -1,14 +1,22 @@
-import React from 'react';
-import { FaSearch } from 'react-icons/fa';
+import React from "react";
+import { FaSearch } from "react-icons/fa";
 
 const SearchSection = ({ isDark, handleSearch, handleRegionChange }) => {
-  const themeClass = isDark ? 'bg-[#111827] text-white' : 'bg-[#f1ffff] text-black';
-  const inputTheme = isDark ? 'bg-[#2b3743] text-[#bbbbbb]' : 'bg-white text-black';
+  const themeClass = isDark
+    ? "bg-[#111827] text-white"
+    : "bg-[#f1ffff] text-black";
+  const inputTheme = isDark
+    ? "bg-[#2b3743] text-[#bbbbbb]"
+    : "bg-white text-black";
 
   return (
     <section className={`flex justify-center ${themeClass}`}>
-      <div className={`flex items-start w-[90%] h-[150px] sm:mt-[1rem] sm:mb-[1rem] sm:flex-col sm:justify-start sm:gap-[2rem] md:flex-row md:justify-between md:mb-0  ${themeClass}`}>
-        <div className={`flex justify-center items-center shadow-xl ${inputTheme}`}>
+      <div
+        className={`flex items-start w-[90%] h-[150px] sm:mt-[1rem] sm:mb-[1rem] sm:flex-col sm:justify-start sm:gap-[2rem] md:flex-row md:justify-between md:mb-0  ${themeClass}`}
+      >
+        <div
+          className={`flex justify-center items-center shadow-xl ${inputTheme}`}
+        >
           <FaSearch className={`w-[2rem] h-[3rem] pl-[0.5rem] ${inputTheme}`} />
           <input
             onChange={(e) => handleSearch(e.target.value)}
@@ -23,9 +31,7 @@ const SearchSection = ({ isDark, handleSearch, handleRegionChange }) => {
           name="region"
           id="region"
         >
-          <option value="">
-            All Regions
-          </option>
+          <option value="">All Regions</option>
           <option value="Africa">Africa</option>
           <option value="Americas">America</option>
           <option value="Asia">Asia</option>
