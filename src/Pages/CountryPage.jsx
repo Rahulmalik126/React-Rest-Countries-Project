@@ -4,10 +4,9 @@ import { FaArrowLeft } from "react-icons/fa";
 import Header from "../Components/Header";
 
 const CountryPage = ({ countries, isDark, setIsDark }) => {
-  const { countryName } = useParams(); // Extract the country name from the URL
+  const { countryName } = useParams();
   const navigate = useNavigate();
 
-  // Find the country by matching countryName to the common name
   const country = countries.find(
     (c) => c.name.common.toLowerCase() === countryName.toLowerCase()
   );
@@ -16,14 +15,12 @@ const CountryPage = ({ countries, isDark, setIsDark }) => {
     return <p>Country not found!</p>;
   }
 
-  // Get the list of border countries
   const borderCountries = country?.borders?.map(
     (borderCode) =>
       countries.find((found) => found.cca3 === borderCode)?.name.common
   );
 
   const handleBorderCountryClick = (borderCountry) => {
-    // Navigate to the border country's page
     navigate(`/${borderCountry.toLowerCase()}`);
   };
 
