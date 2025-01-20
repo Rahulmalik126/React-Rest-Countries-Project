@@ -50,8 +50,8 @@ const CountryPage = ({ countries, isDark, setIsDark }) => {
           <div className='flex flex-col'>
             <div>
               <h2 className="text-2xl font-bold mb-2">{country.name.common}</h2>
-              <div className='flex text-[0.9rem]'>
-                <div className='flex flex-col mr-[1rem]'>
+              <div className='flex text-[0.9rem] gap-[2rem]'>
+                <div className='flex flex-col w-[50%]'>
                   <p>
                     <strong>Native Name:</strong> {country.name.nativeName
                       ? country.name.nativeName[Object.keys(country.name.nativeName)[0]].official
@@ -72,7 +72,7 @@ const CountryPage = ({ countries, isDark, setIsDark }) => {
                       : country.capital}
                   </p>
                 </div>
-                <div>
+                <div className='w-[50%]'>
                   <p>
                     <strong>Top Level Domain:</strong> {Array.isArray(country.tld)
                       ? country.tld.join(", ")
